@@ -11,4 +11,4 @@ In this project you are given a web-based application that reads RSS feeds. The 
 
 ## How To Run
 You can Download or Clone the project repository and open 'index.html'.
-Or click on the link in the below.
+Or click on the link  https://mejoalharthi.github.io/FeedReader/ .
