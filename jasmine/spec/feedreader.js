@@ -66,19 +66,22 @@ $(function() {
 
   /* TODO: Write a new test suite named "New Feed Selection" */
   describe('New Feed Selection', function() {
-    var oldFeedContent;
+    var oldFeedContent,
+    NewFeedContent;
     // a new feed is loaded by the loadFeed function that the content actually changes.
     beforeEach(function(done) {
       loadFeed(0, function() {
         oldFeedContent = $('.feed').text();
+        loadFeed(1, function() {
+          NewFeedContent=$('.feed').text();
+          done();
+        });
       });
-      loadFeed(1, function() {
-        done();
-      });
+
     });
 
     it('feed content changed', function(done) {
-      expect($('.feed .entry')).not.toBe(oldFeedContent);
+      expect(NewFeedContent).not.toBe(oldFeedContent);
       done();
     });
   });
